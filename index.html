@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forge Consulting</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #0f172a;
+    color: white;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+header {
+    padding: 100px 20px;
+    text-align: center;
+    background: linear-gradient(to bottom, #0f172a, #111827);
+}
+
+header h1 {
+    font-size: 4rem;
+    color: #d4af37;
+    margin-bottom: 20px;
+}
+
+header p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    margin: auto;
+    color: #d1d5db;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 35px;
+    background: #d4af37;
+    color: #0f172a;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+section {
+    padding: 80px 20px;
+}
+
+.section-title {
+    text-align: center;
+    color: #d4af37;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 30px;
+}
+
+.card {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.card h3 {
+    color: #d4af37;
+    margin-bottom: 15px;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    gap: 30px;
+}
+
+.product {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 12px;
+}
+
+.product h3 {
+    color: #d4af37;
+    margin-bottom: 15px;
+}
+
+.about {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+    color: #d1d5db;
+}
+
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid #334155;
+    color: #94a3b8;
+}
+
+a {
+    color: #d4af37;
+}
+
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 2.8rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <h1>Forge Consulting</h1>
+
+        <p>
+            Building technology solutions, digital products,
+            and business improvements that help organisations
+            solve real-world problems.
+        </p>
+
+        <a href="#contact" class="btn">Get In Touch</a>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <h2 class="section-title">What We Do</h2>
+
+        <div class="services">
+
+            <div class="card">
+                <h3>Project Delivery</h3>
+                <p>
+                    Project management, implementation leadership,
+                    stakeholder engagement and delivery governance.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Business Improvement</h3>
+                <p>
+                    Process optimisation, operational improvement,
+                    service delivery and organisational transformation.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Technology Solutions</h3>
+                <p>
+                    Digital product design, software implementation,
+                    systems integration and cloud-based solutions.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Consulting Services</h3>
+                <p>
+                    Strategic advisory, problem solving,
+                    planning and business analysis services.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section style="background:#111827;">
+    <div class="container">
+
+        <h2 class="section-title">Products</h2>
+
+        <div class="products">
+
+            <div class="product">
+                <h3>Paladins</h3>
+
+                <p>
+                    An anonymous prayer platform designed to help
+                    people support one another through prayer,
+                    encouragement and faith.
+                </p>
+
+                <br>
+
+                <a href="https://paladins.life">
+                    Visit Paladins →
+                </a>
+            </div>
+
+            <div class="product">
+                <h3>Equipt</h3>
+
+                <p>
+                    A discipleship and learning platform designed
+                    to help churches equip believers and track
+                    spiritual growth pathways.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <div class="container">
+
+        <h2 class="section-title">About Forge Consulting</h2>
+
+        <div class="about">
+
+            <p>
+                Forge Consulting is an Australian-owned consulting
+                and technology business focused on delivering
+                practical solutions that create measurable outcomes.
+            </p>
+
+            <br>
+
+            <p>
+                We combine experience in project delivery,
+                business improvement and software development
+                to build products and services that solve
+                meaningful problems.
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+<section id="contact" style="background:#111827;">
+    <div class="container">
+
+        <h2 class="section-title">Contact</h2>
+
+        <div class="about">
+
+            <p>
+                Interested in working together or learning more
+                about our products?
+            </p>
+
+            <br>
+
+            <p>
+                Email:
+                <a href="mailto:contact@forgeconsulting.au">
+                    contact@forgeconsulting.au
+                </a>
+            </p>
+
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <p>
+        © 2026 Forge Consulting Pty Ltd. All Rights Reserved.
+    </p>
+</footer>
+
+</body>
+</html>
