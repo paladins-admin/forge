@@ -3,289 +3,128 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Forge Consulting - Forging technology for people. Australian consulting, software and digital products.">
 <title>Forge Consulting</title>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #0f172a;
-    color: white;
-    line-height: 1.6;
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
-}
-
-header {
-    padding: 100px 20px;
-    text-align: center;
-    background: linear-gradient(to bottom, #0f172a, #111827);
-}
-
-header h1 {
-    font-size: 4rem;
-    color: #d4af37;
-    margin-bottom: 20px;
-}
-
-header p {
-    font-size: 1.3rem;
-    max-width: 700px;
-    margin: auto;
-    color: #d1d5db;
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 30px;
-    padding: 15px 35px;
-    background: #d4af37;
-    color: #0f172a;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 6px;
-}
-
-section {
-    padding: 80px 20px;
-}
-
-.section-title {
-    text-align: center;
-    color: #d4af37;
-    font-size: 2.5rem;
-    margin-bottom: 50px;
-}
-
-.services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    gap: 30px;
-}
-
-.card {
-    background: #1e293b;
-    padding: 30px;
-    border-radius: 12px;
-}
-
-.card h3 {
-    color: #d4af37;
-    margin-bottom: 15px;
-}
-
-.products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
-    gap: 30px;
-}
-
-.product {
-    background: #1e293b;
-    padding: 30px;
-    border-radius: 12px;
-}
-
-.product h3 {
-    color: #d4af37;
-    margin-bottom: 15px;
-}
-
-.about {
-    max-width: 900px;
-    margin: auto;
-    text-align: center;
-    color: #d1d5db;
-}
-
-footer {
-    text-align: center;
-    padding: 40px 20px;
-    border-top: 1px solid #334155;
-    color: #94a3b8;
-}
-
-a {
-    color: #d4af37;
-}
-
-@media (max-width: 768px) {
-
-    header h1 {
-        font-size: 2.8rem;
-    }
-
-    .section-title {
-        font-size: 2rem;
-    }
-
-}
+:root{--bg:#0f172a;--bg2:#111827;--card:rgba(30,41,59,.72);--gold:#d4af37;--text:#f8fafc;--muted:#cbd5e1;}
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{font-family:'Montserrat',sans-serif;background:linear-gradient(180deg,var(--bg),#101827 40%,var(--bg));color:var(--text);line-height:1.7}
+nav{position:sticky;top:0;background:rgba(15,23,42,.88);backdrop-filter:blur(10px);border-bottom:1px solid rgba(212,175,55,.2);z-index:100}
+.nav{max-width:1200px;margin:auto;padding:18px 24px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-family:'Cinzel',serif;color:var(--gold);font-size:1.4rem;letter-spacing:2px}
+.nav a{color:#fff;text-decoration:none;margin-left:24px}.nav a:hover{color:var(--gold)}
+.container{width:min(92%,1200px);margin:auto}
+.hero{min-height:90vh;display:flex;align-items:center;text-align:center;position:relative}
+.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at top,rgba(212,175,55,.15),transparent 45%)}
+.hero .container{position:relative}
+h1,h2,h3{font-family:'Cinzel',serif}
+h1{font-size:4.8rem;color:var(--gold);letter-spacing:4px}
+.tag{font-size:1.6rem;margin:20px 0}
+.lead{max-width:760px;margin:auto;color:var(--muted)}
+.btn{display:inline-block;padding:15px 32px;border-radius:8px;text-decoration:none;font-weight:600;margin:8px;transition:.3s}
+.primary{background:var(--gold);color:#111827}.secondary{border:1px solid var(--gold);color:var(--gold)}
+.btn:hover,.card:hover{transform:translateY(-6px)}
+section{padding:90px 0}
+.section-title{text-align:center;color:var(--gold);font-size:2.5rem;margin-bottom:15px}
+.section-sub{text-align:center;color:var(--muted);max-width:700px;margin:0 auto 50px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:28px}
+.card{background:var(--card);padding:30px;border-radius:16px;border:1px solid rgba(212,175,55,.15);backdrop-filter:blur(10px);transition:.3s}
+.card h3{color:var(--gold);margin-bottom:16px}
+.card p,.about{color:var(--muted)}
+.product a{color:var(--gold);text-decoration:none;font-weight:600}
+.about{max-width:850px;margin:auto;text-align:center}
+.cta{text-align:center;background:linear-gradient(135deg,#172554,#111827)}
+footer{text-align:center;padding:35px;border-top:1px solid rgba(212,175,55,.15);color:#94a3b8}
+@media(max-width:768px){h1{font-size:3rem}.tag{font-size:1.2rem}.nav{flex-direction:column;gap:10px}.nav a{margin:0 8px}}
 </style>
 </head>
-
 <body>
 
-<header>
-    <div class="container">
-        <h1>Forge Consulting</h1>
+<nav>
+<div class="nav">
+<div class="logo">FORGE CONSULTING</div>
+<div>
+<a href="#services">Services</a>
+<a href="#products">Products</a>
+<a href="#about">About</a>
+<a href="#contact">Contact</a>
+</div>
+</div>
+</nav>
 
-        <p>
-            Building technology solutions, digital products,
-            and business improvements that help organisations
-            solve real-world problems.
-        </p>
-
-        <a href="#contact" class="btn">Get In Touch</a>
-    </div>
+<header class="hero">
+<div class="container">
+<h1>Forge Consulting</h1>
+<p class="tag">Forging technology for people.</p>
+<p class="lead">Forge Consulting is an Australian technology and consulting business creating practical software, digital products and business solutions that improve the way organisations work.</p>
+<div style="margin-top:40px">
+<a class="btn primary" href="#products">Our Products</a>
+<a class="btn secondary" href="#contact">Get In Touch</a>
+</div>
+</div>
 </header>
 
-<section>
-    <div class="container">
-        <h2 class="section-title">What We Do</h2>
-
-        <div class="services">
-
-            <div class="card">
-                <h3>Project Delivery</h3>
-                <p>
-                    Project management, implementation leadership,
-                    stakeholder engagement and delivery governance.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Business Improvement</h3>
-                <p>
-                    Process optimisation, operational improvement,
-                    service delivery and organisational transformation.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Technology Solutions</h3>
-                <p>
-                    Digital product design, software implementation,
-                    systems integration and cloud-based solutions.
-                </p>
-            </div>
-
-            <div class="card">
-                <h3>Consulting Services</h3>
-                <p>
-                    Strategic advisory, problem solving,
-                    planning and business analysis services.
-                </p>
-            </div>
-
-        </div>
-    </div>
+<section id="services">
+<div class="container">
+<h2 class="section-title">What We Do</h2>
+<p class="section-sub">We combine strategy, delivery and technology to solve meaningful business problems.</p>
+<div class="grid">
+<div class="card"><h3>Technology Solutions</h3><p>Custom software, cloud solutions, systems integration and digital product development.</p></div>
+<div class="card"><h3>Project Delivery</h3><p>Project leadership, governance, stakeholder management and implementation delivery.</p></div>
+<div class="card"><h3>Business Improvement</h3><p>Process optimisation, operational improvement and service delivery transformation.</p></div>
+<div class="card"><h3>Consulting</h3><p>Strategic advice, business analysis, solution design and organisational change.</p></div>
+</div>
+</div>
 </section>
 
-<section style="background:#111827;">
-    <div class="container">
+<section id="products">
+<div class="container">
+<h2 class="section-title">Our Products</h2>
+<p class="section-sub">Technology built to solve real-world problems.</p>
+<div class="grid">
+<div class="card product">
+<h3>Paladins</h3>
+<p>An anonymous prayer platform connecting believers through prayer, encouragement and hope. Built to create a safe space where people can share prayer requests, encourage one another and grow together in faith.</p>
+<br><a href="https://paladins.life">Visit paladins.life →</a>
+</div>
 
-        <h2 class="section-title">Products</h2>
-
-        <div class="products">
-
-            <div class="product">
-                <h3>Paladins</h3>
-
-                <p>
-                    An anonymous prayer platform designed to help
-                    people support one another through prayer,
-                    encouragement and faith.
-                </p>
-
-                <br>
-
-                <a href="https://paladins.life">
-                    Visit Paladins →
-                </a>
-            </div>
-
-            <div class="product">
-                <h3>Equipt</h3>
-
-                <p>
-                    A discipleship and learning platform designed
-                    to help churches equip believers and track
-                    spiritual growth pathways.
-                </p>
-            </div>
-
-        </div>
-
-    </div>
+<div class="card product">
+<h3>What's Next</h3>
+<p>At Forge, we're continually exploring new ways technology can improve people's lives.</p>
+<br>
+<p>Our focus is on building thoughtful, practical software that delivers lasting value for individuals, churches and organisations.</p>
+<br>
+<p>More products are currently in development.</p>
+</div>
+</div>
+</div>
 </section>
 
-<section>
-    <div class="container">
-
-        <h2 class="section-title">About Forge Consulting</h2>
-
-        <div class="about">
-
-            <p>
-                Forge Consulting is an Australian-owned consulting
-                and technology business focused on delivering
-                practical solutions that create measurable outcomes.
-            </p>
-
-            <br>
-
-            <p>
-                We combine experience in project delivery,
-                business improvement and software development
-                to build products and services that solve
-                meaningful problems.
-            </p>
-
-        </div>
-
-    </div>
+<section id="about">
+<div class="container">
+<h2 class="section-title">About Forge</h2>
+<div class="about">
+<p><strong>Our mission is simple: forging technology for people.</strong> Every product we build and every engagement we undertake is guided by the belief that technology should solve real problems, strengthen organisations and create lasting value.</p>
+<br>
+<p>Forge Consulting brings together experience across project delivery, technology implementation, software development and business improvement to build practical solutions with long-term impact.</p>
+</div>
+</div>
 </section>
 
-<section id="contact" style="background:#111827;">
-    <div class="container">
-
-        <h2 class="section-title">Contact</h2>
-
-        <div class="about">
-
-            <p>
-                Interested in working together or learning more
-                about our products?
-            </p>
-
-            <br>
-
-            <p>
-                Email:
-                <a href="mailto:contact@forgeconsulting.au">
-                    contact@forgeconsulting.au
-                </a>
-            </p>
-
-        </div>
-
-    </div>
+<section class="cta" id="contact">
+<div class="container">
+<h2 class="section-title">Let's Build Something Great</h2>
+<p class="section-sub">Interested in working together or learning more about Forge Consulting?</p>
+<p><strong>Email:</strong> <a style="color:#d4af37" href="mailto:contact@forgeconsulting.au">contact@forgeconsulting.au</a></p>
+</div>
 </section>
 
-<footer>
-    <p>
-        © 2026 Forge Consulting Pty Ltd. All Rights Reserved.
-    </p>
-</footer>
+<footer>© 2026 Forge Consulting. All Rights Reserved.</footer>
 
 </body>
 </html>
