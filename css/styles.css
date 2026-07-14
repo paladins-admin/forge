@@ -1,0 +1,18 @@
+:root{--bg:#0b1016;--panel:#151d27;--text:#f5f5f5;--copper:#c67b3a;}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,sans-serif;line-height:1.6}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:24px 8%;position:sticky;top:0;background:#0b1016cc;backdrop-filter:blur(8px)}
+.nav a{color:#fff;text-decoration:none;margin-left:24px}
+.brand,h1,h2,h3{font-family:Sora,sans-serif}
+.hero{text-align:center;padding:90px 8%}
+.logo{max-width:280px;margin-bottom:24px}
+.eyebrow{letter-spacing:.3em;color:var(--copper)}
+h1{font-size:clamp(3rem,6vw,5rem);margin:.2em 0}
+.lead{max-width:700px;margin:auto;font-size:1.2rem}
+.btn{display:inline-block;margin-top:32px;padding:14px 30px;border:1px solid var(--copper);color:#fff;text-decoration:none}
+.statement,.process,.cta{padding:80px 10%;text-align:center}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;padding:0 10% 80px}
+.card{background:var(--panel);padding:28px;border-top:3px solid var(--copper)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.steps div{background:var(--panel);padding:24px}
+footer{text-align:center;padding:40px;color:#999}
+@media(max-width:768px){.steps{grid-template-columns:1fr}.nav{flex-direction:column;gap:12px}}

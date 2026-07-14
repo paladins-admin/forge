@@ -1,0 +1,1 @@
+document.querySelectorAll('.btn').forEach(b=>b.addEventListener('mouseenter',()=>b.style.background='#c67b3a'));document.querySelectorAll('.btn').forEach(b=>b.addEventListener('mouseleave',()=>b.style.background='transparent'));
